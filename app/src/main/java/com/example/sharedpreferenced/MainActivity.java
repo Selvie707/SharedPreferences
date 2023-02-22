@@ -28,14 +28,18 @@ public class MainActivity extends AppCompatActivity {
             username = etUsername.getText().toString();
             password = etPassword.getText().toString();
 
-            if (username.equals("admin") && password.equals("admin")) {
-                KL.setPref(MainActivity.this, "spPadang", username);
-                startActivity(new Intent(MainActivity.this, Tampil.class));
-                finish();
-            }
-            else {
-                Toast.makeText(this, "Login Gagal", Toast.LENGTH_SHORT).show();;
-            }
+            KL.setPref(MainActivity.this, "spPadang", username);
+            startActivity(new Intent(MainActivity.this, Tampil.class));
+            finish();
+
+//            if (username.equals("admin") && password.equals("admin")) {
+//                KL.setPref(MainActivity.this, "spPadang", username);
+//                startActivity(new Intent(MainActivity.this, Tampil.class));
+//                finish();
+//            }
+//            else {
+//                Toast.makeText(this, "Login Gagal", Toast.LENGTH_SHORT).show();;
+//            }
         });
     }
 }
